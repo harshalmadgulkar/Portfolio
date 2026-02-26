@@ -4,49 +4,52 @@ import { useEffect, useRef, useState } from "react";
 
 const experiences = [
   {
-    date: "Nov 2025 – Dec 2025",
-    company: "J.P. MORGAN",
-    location: "",
-    mode: "Remote",
-    role: "Software Engineering Job Simulation (Forage)",
+    date: "Feb 2025 – Present",
+    company: "Foxberry Technologies Pvt. Ltd.",
+    location: "Pune, Maharashtra, India",
+    mode: "Work From Office",
+    role: "Frontend (React.js) Developer",
     description:
-      "J.P. Morgan Chase & Co. is a leading global financial services firm providing investment banking, market-making, and asset management services.",
+      "Worked on large-scale public sector applications for Pimpri Chinchwad Municipal Corporation, building scalable React.js systems used in real-world government operations.",
     points: [
-      "Executed enterprise-style software engineering tasks under strict deadlines, simulating real-world development workflows used in large financial institutions.",
-      "Validated, processed, and transformed structured datasets by applying business-rule logic, data integrity checks, and accuracy controls to produce execution-ready outputs.",
-      "Independently debugged and resolved issues while adhering to production-level quality standards, technical specifications, and reliability expectations.",
-    ],
-    tech: [
-      "Python",
-      "Data Validation & Analysis",
-      "Structured Datasets",
-      "Problem Solving",
-      "Git",
-    ],
-  },
-  {
-    date: "May 2023 – Aug 2023",
-    company: "BOARD INFINITY",
-    location: "Maharastra, India",
-    mode: "Remote",
-    role: "Full Stack Developer Intern",
-    description:
-      "Board Infinity is a career-first Learning & Development platform bridging the gap between education and industry through outcome-driven, industry-aligned programs.",
-    points: [
-      "Developed and delivered responsive, component-based web applications using React.js and modern JavaScript (ES6+), ensuring cross-device compatibility and clean UI architecture.",
-      "Built and integrated RESTful APIs with backend services and SQL databases, designing schemas, writing optimized queries, and implementing validated CRUD operations.",
-      "Independently owned end-to-end feature development, debugging, refactoring, and performance optimization while meeting deadlines in a remote, fast-paced environment.",
+      "Engineered a centralized feature visibility and access control platform to manage role-based UI rendering across multiple applications.",
+      "Developed production-grade municipal systems including School Management Information System and Garden E-Ticketing Platform.",
+      "Implemented complex state management using Redux Toolkit & Persist to ensure performance and consistency across large datasets.",
+      "Reduced developer rework by 40% and accelerated deployment cycles by 30% by introducing reusable UI components and standardized workflows."
     ],
     tech: [
       "React.js",
-      "JavaScript (ES6+)",
-      "HTML5",
-      "CSS3",
-      "RESTful APIs",
-      "SQL",
-      "Git",
+      "TypeScript",
+      "Redux Toolkit",
+      "Redux Persist",
+      "Tailwind CSS",
+      "Vite",
+      "Git"
     ],
   },
+  {
+    date: "Mar 2024 – Sep 2024",
+    company: "Program-Warehouse Pvt. Ltd.",
+    location: "Jaipur, India",
+    mode: "Onsite",
+    role: "Frontend Developer Intern",
+    description:
+      "Contributed to responsive web applications using React.js and modern UI practices, focusing on clean component architecture and efficient state management.",
+    points: [
+      "Built responsive, production-ready React.js applications from design mockups.",
+      "Implemented state management using Redux and Context API to optimize performance.",
+      "Collaborated with backend teams for API integration and data flow consistency.",
+      "Improved UI responsiveness and cross-device compatibility."
+    ],
+    tech: [
+      "React.js",
+      "JavaScript",
+      "Tailwind CSS",
+      "Redux",
+      "Context API",
+      "Git"
+    ],
+  }
 ];
 
 export default function Experience() {
@@ -100,13 +103,7 @@ export default function Experience() {
         `}
       >
         <h2
-          className="
-            py-20
-            text-[3.5rem] sm:text-[4.5rem] md:text-[5.5rem]
-            font-extrabold tracking-widest
-            bg-gradient-to-b from-white/30 via-white/5 to-transparent
-            bg-clip-text text-transparent
-          "
+          className="py-20 text-[3.5rem] sm:text-[4.5rem] md:text-[5.5rem] font-extrabold tracking-widest bg-linear-to-b from-white/30 to-white/5 bg-clip-text text-transparent"
         >
           EXPERIENCE
         </h2>
@@ -115,9 +112,9 @@ export default function Experience() {
       <div className="relative z-10 max-w-7xl mx-auto mt-28 px-6">
         {/* ===== MOBILE TIMELINE ===== */}
         <div className="md:hidden absolute left-4 top-0 h-full">
-          <div className="relative h-full w-[3px] bg-white/10 rounded-full">
+          <div className="relative h-full w-0.75 bg-white/10 rounded-full">
             <div
-              className="absolute top-0 w-[3px] rounded-full"
+              className="absolute top-0 w-0.75 rounded-full"
               style={{
                 height: `${progress * 100}%`,
                 background:
@@ -125,7 +122,7 @@ export default function Experience() {
               }}
             />
             <div
-              className="absolute -left-[6px]"
+              className="absolute -left-1.5"
               style={{ top: `calc(${progress * 100}% - 8px)` }}
             >
               <div className="w-4 h-4 rounded-full bg-white" />
@@ -135,9 +132,9 @@ export default function Experience() {
 
         {/* ===== DESKTOP / TABLET TIMELINE ===== */}
         <div className="hidden md:block absolute left-1/3 top-0 h-full -translate-x-1/2">
-          <div className="relative h-full w-[2px] bg-white/10">
+          <div className="relative h-full w-0.5 bg-white/10">
             <div
-              className="absolute top-0 w-[2px]"
+              className="absolute top-0 w-0.5"
               style={{
                 height: `${progress * 100}%`,
                 background:
@@ -158,13 +155,7 @@ export default function Experience() {
           {experiences.map((exp, i) => (
             <div
               key={i}
-              className={`
-                grid grid-cols-1 md:grid-cols-[1fr_80px_2fr]
-                gap-5 items-start
-                pl-10 md:pl-0
-                transition-all duration-1000 ease-out
-                ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"}
-              `}
+              className={`grid grid-cols-1 md:grid-cols-[1fr_80px_2fr] gap-5 items-start pl-10 md:pl-0 transition-all duration-1000 ease-out ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"}`}
               style={{ transitionDelay: `${i * 120}ms` }}
             >
               {/* META */}
@@ -172,7 +163,7 @@ export default function Experience() {
                 <div className="uppercase tracking-wide text-xs mb-1">
                   {exp.date}
                 </div>
-                <h3 className="text-2xl font-semibold mb-1 bg-gradient-to-r from-orange-400 via-yellow-400 to-yellow-400 bg-clip-text text-transparent">
+                <h3 className="text-2xl font-semibold mb-1 bg-linear-to-r from-orange-400 via-yellow-400 to-yellow-400 bg-clip-text text-transparent">
                   {exp.company}
                 </h3>
                 <div className="text-gray-500">{exp.location}</div>
@@ -183,7 +174,7 @@ export default function Experience() {
 
               {/* CONTENT */}
               <div>
-                <h4 className="text-3xl md:text-2xl font-semibold mb-2 bg-gradient-to-r from-orange-400 via-yellow-400 to-yellow-400 bg-clip-text text-transparent">
+                <h4 className="text-3xl md:text-2xl font-semibold mb-2 bg-linear-to-r from-orange-400 via-yellow-400 to-yellow-400 bg-clip-text text-transparent">
                   {exp.role}
                 </h4>
 

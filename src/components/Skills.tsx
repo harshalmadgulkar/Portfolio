@@ -32,7 +32,7 @@ function Marquee({
   items,
   reverse = false,
 }: {
-  items: { name: string; icon: string }[];
+  items: { name: string; icon: string; }[];
   reverse?: boolean;
 }) {
   return (
@@ -60,7 +60,7 @@ function Marquee({
 function SkillPill({
   item,
 }: {
-  item: { name: string; icon: string };
+  item: { name: string; icon: string; };
 }) {
   return (
     <div
@@ -120,46 +120,20 @@ export default function Skills() {
   return (
     <section
       ref={sectionRef}
-      className="relative
-  pt-8 pb-32
-  sm:pt-10 sm:pb-14
-  md:pt-10 md:pb-30
-  bg-black overflow-hidden"
+      id="skills"
+      className="relative pt-30 pb-10 sm:pt-10 sm:pb-14 md:pt-10 md:pb-10 bg-black overflow-hidden"
     >
       {/* BACKGROUND HEADING */}
-      <div
-        className={`
-          absolute inset-x-0 top-5 flex justify-center pointer-events-none
-          transition-all duration-1000 ease-out
-          ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"}
-        `}
-        style={{
-          transform: `translateY(${inView ? -scrollOffset : 16}px)`
-        }}
-      >
-        <h2
-          className="
-            text-[3.5rem] sm:text-[5rem] md:text-[6rem]
-            font-extrabold tracking-widest
-            bg-gradient-to-b from-white/15 via-white/5 to-transparent
-            bg-clip-text text-transparent
-            select-none
-          "
-        >
+      <div className="relative flex items-center justify-center mb-10">
+        <h2 className="text-[4.5rem] sm:text-[5rem] md:text-[7rem] font-extrabold tracking-widest bg-linear-to-b from-white/15 to-white/5 bg-clip-text text-transparent select-none">
           SKILLS
         </h2>
       </div>
 
       {/* MARQUEES */}
       <div
-        className={`
-          relative z-10 w-full mx-auto mt-24 sm:mt-32 md:mt-40 space-y-8 sm:space-y-10 md:space-y-12
-          transition-all duration-1000 ease-out delay-150
-          ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"}
-        `}
-        style={{
-          transform: `translateY(${inView ? -scrollOffset : 16}px)`
-        }}
+        className={`relative z-10 w-full mx-auto mt-24 sm:mt-32 md:mt-20 space-y-8 sm:space-y-10 md:space-y-12 transition-all duration-1000 ease-out delay-150 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"} `}
+        style={{ transform: `translateY(${inView ? -scrollOffset : 16}px)` }}
       >
         <Marquee items={ROW_1} />
         <Marquee items={ROW_2} reverse />

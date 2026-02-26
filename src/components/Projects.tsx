@@ -26,13 +26,7 @@ function ProjectCard({
 }) {
   return (
     <div
-      className="
-        relative flex flex-col md:flex-row
-        min-h-[320px] md:h-[340px]
-        rounded-3xl overflow-hidden
-        bg-white/[0.04] border border-white/10
-        backdrop-blur-xl
-      "
+      className="relative flex flex-col md:flex-row min-h-80 md:h-85 rounded-3xl overflow-hidden bg-white/4 border border-white/10 backdrop-blur-xl"
     >
       {/* CONTENT */}
       <div className="flex flex-col justify-between p-6 md:p-8 md:w-1/2">
@@ -41,7 +35,7 @@ function ProjectCard({
             {year} · {type}
           </span>
 
-          <h3 className="text-2xl md:text-3xl font-semibold mb-3 bg-gradient-to-r from-orange-500 via-amber-500 to-yellow-400 bg-clip-text text-transparent">
+          <h3 className="text-2xl md:text-3xl font-semibold mb-3 bg-linear-to-r from-orange-500 via-amber-500 to-yellow-400 bg-clip-text text-transparent">
             {title}
           </h3>
 
@@ -90,7 +84,7 @@ function ProjectCard({
       </div>
 
       {/* IMAGE */}
-      <div className="relative md:w-1/2 h-[180px] md:h-full">
+      <div className="relative md:w-1/2 h-45 md:h-full">
         {!placeholder && image && (
           <Image
             src={image}
@@ -124,10 +118,7 @@ export default function Projects() {
     <section
       id="projects"
       ref={sectionRef}
-      className="
-        relative md:pt-10 md:pb-20 bg-black overflow-hidden
-        scroll-mt-[120px]
-      "
+      className="relative md:pt-10 md:pb-20 bg-black overflow-hidden scroll-mt-30"
     >
       {/* HEADING */}
       <div
@@ -138,13 +129,7 @@ export default function Projects() {
         `}
       >
         <h2
-          className="
-            text-[3.5rem] sm:text-[4.5rem] md:text-[5.5rem]
-            sm:
-            font-extrabold tracking-widest
-            bg-gradient-to-b from-white/15 via-white/5 to-transparent
-            bg-clip-text text-transparent select-none
-          "
+          className="text-[3.5rem] sm:text-[4.5rem] md:text-[5.5rem] sm:font-extrabold tracking-widest bg-linear-to-b from-white/15 to-white/5 bg-clip-text text-transparent select-none"
         >
           PROJECTS
         </h2>
@@ -152,44 +137,63 @@ export default function Projects() {
 
       {/* CONTENT */}
       <div
-        className="
-          relative z-10 max-w-7xl mx-auto
-          mt-28 sm:mt-32
-          grid grid-cols-1 md:grid-cols-2
-          gap-8 md:gap-10
-          px-6 pb-10
-        "
+        className="relative z-10 max-w-7xl mx-auto mt-28 sm:mt-32 grid grid-cols-1 md:grid-cols-1 gap-8 md:gap-10 px-6 pb-10"
       >
         <div
-          className={`
-            transition-all duration-1000 ease-out delay-100
-            ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"}
-          `}
+          className={`transition-all duration-1000 ease-out delay-100 ${inView ? "opacity-100 translate-y-0" : "opacity-0 -y-16"}`}
         >
           <ProjectCard
-            title="SlotSure"
+            title="School Management Information System (SMIS)"
             year="2025"
-            type="Web App"
-            description="Smart no-show reduction appointment booking platform designed for clinics and service-based businesses."
-            tech={["React", "PostgreSQL"]}
-            image="/project.png"
-            live="https://slotsure.vercel.app/"
-            github="https://github.com/jamiecoded/slotsure"
+            type="Municipal Platform"
+            description="A large-scale role-based React.js platform built for Pimpri Chinchwad Municipal Corporation to manage student records, attendance, staff data, and hierarchical holiday systems across multiple schools."
+            tech={[
+              "React.js",
+              "TypeScript",
+              "Redux Toolkit",
+              "Redux Persist",
+              "Tailwind CSS"
+            ]}
+            image="/smis.png"
+            live="https://dev.mis.chdc.foxberry.live/"
           />
         </div>
 
         <div
-          className={`
-            transition-all duration-1000 ease-out delay-200
-            ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"}
-          `}
+          className={`transition-all duration-1000 ease-out delay-200 ${inView ? "opacity-100 translate-y-0" : "opacity-0 -y-16"}`}
         >
           <ProjectCard
-            title="Next Project"
-            year="2026"
-            type="In Progress"
-            description="Currently building something meaningful. Details coming soon."
-            placeholder
+            title="Garden E-Ticketing Platform"
+            year="2025"
+            type="Public Sector Application"
+            description="QR-based digital ticketing system with secure payment gateway integration, built for municipal gardens to eliminate manual cash handling and streamline visitor entry."
+            tech={[
+              "React.js",
+              "TypeScript",
+              "Redux Toolkit",
+              "Tailwind CSS",
+              "Payment Gateway Integration"
+            ]}
+            image="/garden.png"
+            live="http://garden.pcmcsmartsarathi.org/"
+          />
+        </div>
+
+        <div
+          className={`transition-all duration-1000 ease-out delay-200 ${inView ? "opacity-100 translate-y-0" : "opacity-0 -y-16"}`}
+        >
+          <ProjectCard
+            title="Feature Visibility & Access Control Platform"
+            year="2025"
+            type="Internal Engineering Tool"
+            description="Centralized role-based feature management system designed to control UI visibility across multiple web and mobile applications, reducing developer rework and accelerating deployment cycles."
+            tech={[
+              "React.js",
+              "Redux Toolkit",
+              "Role-Based Access Control",
+              "Reusable Component Architecture"
+            ]}
+            image="/feature-platform.png"
           />
         </div>
       </div>

@@ -59,7 +59,7 @@ export default function Navbar() {
      ACTIVE SECTION
   ========================= */
   useEffect(() => {
-    const sections = ["home", "about", "projects", "contact"];
+    const sections = ["home", "about", "projects", "experience", "contact"];
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -109,7 +109,9 @@ export default function Navbar() {
   const navItems = [
     { label: "Home", id: "home" },
     { label: "About", id: "about" },
+    { label: "Skills", id: "skills" },
     { label: "Projects", id: "projects" },
+    { label: "Experience", id: "experience" },
     { label: "Contact", id: "contact" },
   ];
 
@@ -126,12 +128,7 @@ export default function Navbar() {
     <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50">
       {/* PILL (UNCHANGED SHAPE) */}
       <div
-        className={`
-          relative overflow-hidden
-          transition-all duration-500 ease-out
-          ${isMobile ? "w-[300px]" : "w-auto"}
-          h-[56px]
-        `}
+        className={`relative overflow-hidden transition-all duration-500 ease-out ${isMobile ? "w-75" : "w-auto"} h-14`}
         style={{
           borderRadius: `${radiusPx}px`,
           backgroundColor: `rgba(255,255,255,${glassOpacity})`,
@@ -152,7 +149,7 @@ export default function Navbar() {
         <div className="relative z-10 flex items-center justify-between px-4 h-14">
           {/* LOGO */}
           <div className="w-9 h-9 rounded-full bg-black/30 backdrop-blur-md flex items-center justify-center">
-            <Image src="/logo.svg" alt="logo" width={18} height={18} />
+            <Image src="/logo.png" alt="logo" width={25} height={25} />
           </div>
 
           {/* DESKTOP LINKS */}
@@ -161,11 +158,10 @@ export default function Navbar() {
               <li key={item.id}>
                 <button
                   onClick={() => scrollTo(item.id)}
-                  className={`transition-colors ${
-                    active === item.id
-                      ? "text-orange-400"
-                      : "text-white hover:text-orange-300"
-                  }`}
+                  className={`transition-colors cursor-pointer ${active === item.id
+                    ? "text-orange-400"
+                    : "text-white hover:text-orange-300"
+                    }`}
                 >
                   {item.label}
                 </button>
@@ -185,14 +181,7 @@ export default function Navbar() {
 
       {/* MOBILE DROPDOWN (SLIDES DOWN) */}
       <div
-        className={`
-          md:hidden
-          mt-2
-          w-[300px]
-          overflow-hidden
-          transition-all duration-400 ease-out
-          ${open ? "max-h-[220px] opacity-100 translate-y-0" : "max-h-0 opacity-0 -translate-y-2"}
-        `}
+        className={`md:hidden mt-2 w-75 overflow-hidden transition-all duration-400 ease-out ${open ? "max-h-80 opacity-100 translate-y-0" : "max-h-0 opacity-0 -translate-y-2"} `}
         style={{
           borderRadius: "24px",
           backgroundColor: `rgba(255,255,255,${glassOpacity})`,
@@ -205,11 +194,10 @@ export default function Navbar() {
             <li key={item.id}>
               <button
                 onClick={() => scrollTo(item.id)}
-                className={`text-lg transition-colors ${
-                  active === item.id
-                    ? "text-orange-400"
-                    : "text-white hover:text-orange-300"
-                }`}
+                className={`text-lg transition-colors ${active === item.id
+                  ? "text-orange-400"
+                  : "text-white hover:text-orange-300"
+                  }`}
               >
                 {item.label}
               </button>

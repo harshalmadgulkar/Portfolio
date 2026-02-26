@@ -39,7 +39,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen bg-black overflow-hidden"
+      className="relative min-h-screen bg-black overflow-hidden flex justify-center items-center"
     >
       {/* =========================
           BACKGROUND TEXT
@@ -47,55 +47,58 @@ export default function Hero() {
 
       {/* DESKTOP / TABLET */}
       <div
-        className={`
-          hidden md:flex
-          absolute inset-0 items-center justify-center
-          transition-opacity duration-1000
-          ${mounted ? "opacity-100" : "opacity-0"}
-        `}
-        style={{ zIndex: 1 }}
+        className={`hidden md:grid grid-cols-20 -top-8 absolute inset-0 items-center justify-center transition-opacity duration-1000 ${mounted ? "opacity-100" : "opacity-0"} `} style={{ zIndex: 1 }}
       >
-        <h1 className="
-          text-[14rem] lg:text-[18rem]
-          font-extrabold tracking-widest
-          bg-gradient-to-b from-white/15 via-white/6 to-transparent
-          bg-clip-text text-transparent
-          select-none
-        ">
-          JAMES
-        </h1>
+        <div
+          className={`text-[5rem] lg:text-[7rem] col-span-8 font-extrabold bg-linear-to-b from-white/15 to-white/6 bg-clip-text text-transparent select-none transition-all duration-1000 ease-out ${mounted ? "translate-x-0 opacity-100" : "-translate-x-32 opacity-0"}`}
+        >
+          HARSHAL
+        </div>
+        <div className="col-span-4" />
+        <div
+          className={`text-[5rem] lg:text-[5.5rem] col-span-8 font-extrabold bg-linear-to-b from-white/15 to-white/6 bg-clip-text text-transparent select-none transition-all duration-1000 ease-out ${mounted ? "translate-x-0 opacity-100" : "translate-x-32 opacity-0"} `}
+        >
+          MADGULKAR
+        </div>
       </div>
 
       {/* MOBILE — SPLIT TEXT */}
       <div
-        className={`
-          md:hidden
-          absolute inset-0
-          flex flex-col items-center
-          pt-20
-          transition-opacity duration-1000
-          ${mounted ? "opacity-100" : "opacity-0"}
-        `}
+        className={`md:hidden absolute top-14 flex items-center justify-center transition-opacity duration-1000 ${mounted ? "opacity-100" : "opacity-0"
+          }`}
         style={{ zIndex: 1 }}
       >
-        <span className="
-          text-[12rem]
-          font-black tracking-widest
-          bg-gradient-to-b from-white/18 to-transparent
-          bg-clip-text text-transparent
-          -ml-4 -mt-10
-        ">
-          JAM
-        </span>
-        <span className="
-          text-[20rem]
-          font-extrabold tracking-widest
-          bg-gradient-to-b from-white/18 to-transparent
-          bg-clip-text text-transparent
-          -mr-4 -mt-40
-        ">
-          ES
-        </span>
+        <svg viewBox="0 0 300 300" className="w-96 h-96 -rotate-90">
+          <defs>
+            <path
+              id="circlePath"
+              d="
+          M150,150
+          m-100,0
+          a100,100 0 1,1 200,0
+          a100,100 0 1,1 -200,0
+        "
+            />
+          </defs>
+
+          <text
+            fill="url(#grad)"
+            fontSize="28"
+            fontWeight="900"
+            letterSpacing="8"
+          >
+            <textPath href="#circlePath" startOffset="50%" textAnchor="middle">
+              HARSHAL
+            </textPath>
+          </text>
+
+          <defs>
+            <linearGradient id="grad" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stopColor="rgba(255,255,255,0.15)" />
+              <stop offset="100%" stopColor="rgba(255,255,255,0.06)" />
+            </linearGradient>
+          </defs>
+        </svg>
       </div>
 
       {/* =========================
@@ -112,12 +115,7 @@ export default function Hero() {
       >
         <div
           ref={imageRef}
-          className="
-            relative
-            w-[280px] h-[460px]
-            md:w-[380px] md:h-[480px]
-            lg:w-[460px] lg:h-[560px]
-          "
+          className="relative w-70 h-115 md:w-95 md:h-120 lg:w-115 lg:h-140"
           onMouseMove={handleMouseMove}
           onMouseEnter={() => !isTouch && setHovered(true)}
           onMouseLeave={() => !isTouch && setHovered(false)}
@@ -173,16 +171,20 @@ export default function Hero() {
         `}
         style={{ zIndex: 4 }}
       >
-        <h2 className="text-4xl font-bold bg-gradient-to-r from-orange-500 via-amber-500 to-yellow-400 bg-clip-text text-transparent">
+        <h2 className="text-4xl font-bold bg-linear-to-r from-orange-500 via-amber-500 to-yellow-400 bg-clip-text text-transparent">
           Building Real-World  <br /> Web Products
         </h2>
 
         <p className="text-[0.9rem] mt-2 text-gray-400">
-          Clean, functional & intelligent web experiences.
+          I build scalable React.js applications with reusable component architecture, role-based access systems, and performance-optimized UI used in real-world municipal platforms.
         </p>
 
-        <p className="text-[0.6rem] mt-15 text-gray-500">
-          Creative Developer · AI / Design / Fullstack
+        <h2 className="text-4xl font-bold bg-linear-to-r from-orange-500 via-amber-500 to-yellow-400 bg-clip-text text-transparent">
+          Frontend Engineer
+        </h2>
+
+        <p className="text-[0.9rem] mt-2 text-gray-400">
+          React • TypeScript • Scalable Architecture
         </p>
       </div>
 
@@ -190,22 +192,21 @@ export default function Hero() {
           DESKTOP TEXT (UNCHANGED)
       ========================= */}
       <div className="hidden md:block absolute bottom-20 left-20 max-w-md z-10">
-        <h2 className="text-lg font-bold bg-gradient-to-r from-orange-500 via-amber-500 to-yellow-400 bg-clip-text text-transparent">
+        <h2 className="text-lg font-bold bg-linear-to-r from-orange-500 via-amber-500 to-yellow-400 bg-clip-text text-transparent">
           Building Real-World Web Products
         </h2>
         <p className="text-sm mt-1 text-gray-500">
-          I’m a fresher developer focused on building clean, functional, and
-          intelligent web experiences.
+          I build scalable React.js applications with reusable component architecture, role-based access systems, and performance-optimized UI used in real-world municipal platforms.
         </p>
       </div>
 
       <div className="hidden md:block absolute bottom-20 right-20 text-right z-10">
         <p className="text-sm text-gray-500">
-          <span className="text-lg bg-gradient-to-r from-orange-500 via-amber-500 to-yellow-400 bg-clip-text text-transparent">
-            Creative Developer
+          <span className="text-lg bg-linear-to-r from-orange-500 via-amber-500 to-yellow-400 bg-clip-text text-transparent">
+            Frontend Engineer
           </span>
           <br />
-          AI / Design / Fullstack
+          React • TypeScript • Scalable Architecture
         </p>
       </div>
     </section>

@@ -1,5 +1,6 @@
 "use client";
 
+import { FileSpreadsheet } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
@@ -43,19 +44,12 @@ export default function About() {
     <section
       ref={sectionRef}
       id="about"
-      className="relative md:mb-15 min-h-[85vh] md:min-h-screen bg-black text-white overflow-hidden"
-      
+      className="relative mt-20 md:mb-10 min-h-[85vh] md:min-h-screen bg-black text-white overflow-hidden"
     >
       {/* ================= SECTION HEADING ================= */}
-      
+
       <div className="relative flex items-center justify-center mb-10">
-        <h2 className="
-          text-[4.5rem] sm:text-[5rem] md:text-[7rem]
-          font-extrabold tracking-widest
-          bg-gradient-to-b from-white/15 via-white/5 to-transparent
-          bg-clip-text text-transparent
-          select-none
-        ">
+        <h2 className="text-[4.5rem] sm:text-[5rem] md:text-[7rem] font-extrabold tracking-widest bg-linear-to-b from-white/15 to-white/5 bg-clip-text text-transparent select-none">
           ABOUT
         </h2>
       </div>
@@ -74,13 +68,7 @@ export default function About() {
         }}
       >
         <div
-          className="
-            w-[420px] lg:w-[520px]
-            aspect-auto
-            rounded-tr-3xl rounded-br-3xl
-            shadow-[0_30px_80px_rgba(0,0,0,0.7)]
-            overflow-visible
-          "
+          className="w-105 lg:w-130 aspect-auto rounded-tr-3xl rounded-br-3xl shadow-[0_30px_80px_rgba(0,0,0,0.7)] overflow-visible"
         >
           <video
             src="/about-video.mp4"
@@ -94,12 +82,7 @@ export default function About() {
       </div>
 
       {/* ================= CONTENT ================= */}
-      <div className="
-        relative z-20
-        max-w-6xl mx-auto
-        px-6 md:px-10
-        md:pl-[360px] lg:pl-[460px]
-      ">
+      <div className="relative z-20 max-w-6xl mx-auto px-6 md:px-10 md:pl-90 lg:pl-115">
         <div
           className={`
             transition-all duration-1000 ease-out delay-150
@@ -111,15 +94,13 @@ export default function About() {
         >
           <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold">
             Hi, I’m{" "}
-            <span className="bg-gradient-to-r from-orange-500 via-amber-500 to-yellow-400 bg-clip-text text-transparent">
-              James
+            <span className="bg-linear-to-r from-orange-500 via-amber-500 to-yellow-400 bg-clip-text text-transparent">
+              Harshal
             </span>
           </h3>
 
           <p className="mt-6 text-gray-400 leading-relaxed w-full">
-            I’m a fresher developer focused on building modern web applications
-            with clean UI and solid logic. Alongside development, I work with
-            basic data analysis and graphic design.
+            I’m a Frontend Engineer with 1.5+ years of experience building scalable, production-grade React.js applications. I specialize in role-based systems, reusable UI architecture, and performance-optimized web platforms used in real-world municipal and enterprise environments.
           </p>
 
           {/* WHAT I DO */}
@@ -130,11 +111,12 @@ export default function About() {
 
             <div className="flex flex-wrap gap-3">
               {[
-                "Frontend Development",
-                "Backend Development",
-                "UI Implementation",
-                "Data Analysis",
-                "Graphic Design",
+                "React.js Architecture",
+                "TypeScript Development",
+                "Redux Toolkit State Management",
+                "Role-Based Access Systems",
+                "Reusable UI Component Libraries",
+                "Performance Optimization"
               ].map((item) => (
                 <span
                   key={item}
@@ -154,7 +136,7 @@ export default function About() {
           ">
             {/* Mobile video inline */}
             <div className="md:hidden flex gap-5 items-center -ml-6">
-              <div className="w-[120px] aspect-auto rounded-xl overflow-hidden">
+              <div className="w-30 aspect-auto rounded-xl overflow-hidden">
                 <video
                   src="/about-video.mp4"
                   autoPlay
@@ -166,18 +148,12 @@ export default function About() {
               </div>
 
               <a
-                href="/resume.pdf"
+                href="/Harshal_Madgulkar_Resume_7559207299.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="
-                  flex-1 px-6 py-4 rounded-xl
-                  bg-white/5 border border-white/10
-                  uppercase tracking-widest text-sm
-                  hover:bg-white/10 transition
-                  text-center
-                "
+                className="flex-1 px-6 py-4 rounded-xl bg-white/5 border border-white/10 uppercase tracking-widest text-sm hover:bg-white/10 transition text-center"
               >
-                Download Resume ↓
+                Download Resume <FileSpreadsheet />
               </a>
             </div>
 
@@ -188,31 +164,25 @@ export default function About() {
               </p>
 
               <div className="flex gap-4">
-                <a href="https://github.com/jamiecoded" target="_blank">
+                <a href="https://github.com/harshalmadgulkar" target="_blank">
                   <IconWrap><FaGithub size={18} /></IconWrap>
                 </a>
-                <a href="https://www.linkedin.com/in/jameshere/" target="_blank">
+                <a href="https://www.linkedin.com/in/harshal-madgulkar" target="_blank">
                   <IconWrap><FaLinkedin size={18} /></IconWrap>
                 </a>
-                <a href="mailto:sanjames.dev@gmail.com">
+                <a href="mailto:harshal.madgulkar725@gmail.com">
                   <IconWrap><FaEnvelope size={18} /></IconWrap>
                 </a>
               </div>
             </div>
 
             <a
-              href="/resume.pdf"
+              href="/Harshal_Madgulkar_Resume_7559207299.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="
-                hidden md:inline-block
-                px-10 py-6 rounded-xl
-                bg-white/5 border border-white/10
-                uppercase tracking-widest text-sm
-                hover:bg-white/10 transition
-              "
+              className="hidden md:flex items-center px-10 py-6 rounded-xl bg-white/5 border border-white/10 uppercase tracking-widest text-sm hover:bg-white/10 transition"
             >
-              Download Resume ↓
+              Download Resume <FileSpreadsheet />
             </a>
           </div>
         </div>
@@ -221,14 +191,9 @@ export default function About() {
   );
 }
 
-function IconWrap({ children }: { children: React.ReactNode }) {
+function IconWrap({ children }: { children: React.ReactNode; }) {
   return (
-    <div className="
-      w-12 h-12 rounded-xl
-      flex items-center justify-center
-      bg-white/5 border border-white/10
-      hover:bg-white/10 transition
-    ">
+    <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-white/5 border border-white/10 hover:bg-white/10 transition">
       {children}
     </div>
   );
