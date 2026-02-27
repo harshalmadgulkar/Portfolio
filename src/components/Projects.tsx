@@ -124,7 +124,7 @@ export default function Projects() {
       <div
         className={`
           absolute inset-x-0 top-0 flex justify-center pointer-events-none
-          transition-all duration-100 ease-out
+          transition-all duration-1000 ease-out
           ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"}
         `}
       >
