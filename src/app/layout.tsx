@@ -1,4 +1,5 @@
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 import Navbar from "@/components/Navbar";
 import LenisProvider from "@/components/LenisProvider";
 import { Rubik } from "next/font/google";
@@ -27,6 +28,7 @@ export default function RootLayout({
           <Navbar />
           {children}
         </LenisProvider>
+        <Analytics />
 
 
         <script
