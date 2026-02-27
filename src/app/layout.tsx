@@ -43,7 +43,12 @@ export default function RootLayout({
               "@type": "Person",
               name: "Harshal Madgulkar",
               url: "https://harshalmadgulkar.live",
-              jobTitle: "Frontend Engineer",
+              jobTitle: "React Developer",
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Pune",
+                addressCountry: "India",
+              },
               sameAs: [
                 "https://github.com/harshalmadgulkar",
                 "https://www.linkedin.com/in/harshal-madgulkar/"
@@ -59,14 +64,14 @@ export default function RootLayout({
 // SEO Data
 export const metadata = {
   title: {
-    default: "Harshal Madgulkar | Frontend Engineer",
+    default: "Harshal Madgulkar - React Developer & Frontend Engineer",
     template: "%s | Harshal Madgulkar",
   },
-  description: "Harshal Madgulkar is a Frontend Engineer specializing in React.js, TypeScript and scalable web applications.",
+  description: "Harshal Madgulkar is a Pune-based React Developer specializing in scalable frontend architecture and performance optimization.",
   openGraph: {
-    title: "Harshal Madgulkar | Frontend Engineer",
+    title: "Harshal Madgulkar - React Developer & Frontend Engineer",
     description:
-      "Frontend Engineer building scalable React apps.",
+      "Harshal Madgulkar is a Pune-based React Developer specializing in scalable frontend architecture and performance optimization.",
     url: "https://harshalmadgulkar.live",
     siteName: "Harshal Portfolio",
     type: "website",

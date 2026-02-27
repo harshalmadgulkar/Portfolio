@@ -41,6 +41,10 @@ export default function Hero() {
       id="home"
       className="relative min-h-screen bg-black overflow-hidden flex justify-center items-center"
     >
+
+      <h1 className="sr-only">
+        Harshal Madgulkar - React Developer & Frontend Engineer
+      </h1>
       {/* =========================
           BACKGROUND TEXT
       ========================= */}
@@ -126,7 +130,7 @@ export default function Hero() {
         >
           <Image
             src="/normal.png"
-            alt="Portrait"
+            alt="Harshal Madgulkar - React Developer Portrait"
             fill
             priority
             className="object-cover rounded-xl"
@@ -145,7 +149,7 @@ export default function Hero() {
             >
               <Image
                 src="/robotic.png"
-                alt="Robotic portrait"
+                alt="Futuristic developer illustration of Harshal Madgulkar"
                 fill
                 className="object-cover rounded-xl"
               />
