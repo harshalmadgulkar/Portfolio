@@ -180,7 +180,7 @@ export default function Hero() {
         </p>
 
         <h2 className="text-4xl font-bold bg-linear-to-r from-orange-500 via-amber-500 to-yellow-400 bg-clip-text text-transparent">
-          Frontend Engineer
+          Frontend Engineer • React Developer
         </h2>
 
         <p className="text-[0.9rem] mt-2 text-gray-400">
@@ -203,7 +203,7 @@ export default function Hero() {
       <div className="hidden md:block absolute bottom-20 right-20 text-right z-10">
         <p className="text-sm text-gray-500">
           <span className="text-lg bg-linear-to-r from-orange-500 via-amber-500 to-yellow-400 bg-clip-text text-transparent">
-            Frontend Engineer
+            Frontend Engineer • React Developer
           </span>
           <br />
           React • TypeScript • Scalable Architecture

@@ -1,6 +1,6 @@
 "use client";
 
-import { FileSpreadsheet } from "lucide-react";
+import { Download } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
@@ -100,7 +100,7 @@ export default function About() {
           </h3>
 
           <p className="mt-6 text-gray-400 leading-relaxed w-full">
-            I’m a Frontend Engineer with 1.5+ years of experience building scalable, production-grade React.js applications. I specialize in role-based systems, reusable UI architecture, and performance-optimized web platforms used in real-world municipal and enterprise environments.
+            I’m a Frontend (React.js) Engineer with 1.5+ years of experience building scalable, production-grade React.js applications. I specialize in role-based systems, reusable UI architecture, and performance-optimized web platforms used in real-world municipal and enterprise environments.
           </p>
 
           {/* WHAT I DO */}
@@ -146,15 +146,16 @@ export default function About() {
                   className="w-full h-full object-cover"
                 />
               </div>
-
-              <a
-                href="/Harshal_Madgulkar_Resume_7559207299.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-1 px-6 py-4 rounded-xl bg-white/5 border border-white/10 uppercase tracking-widest text-sm hover:bg-white/10 transition text-center"
-              >
-                Download Resume <FileSpreadsheet />
-              </a>
+              <div className="flex px-6 py-4 gap-3 items-center rounded-xl bg-white/5 border border-white/10 uppercase tracking-widest text-md hover:bg-white/10 transition text-center">
+                <Download />
+                <a
+                  href="/Harshal_Madgulkar_Resume_7559207299.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Resume
+                </a>
+              </div>
             </div>
 
             {/* Desktop / Tablet connect */}
@@ -180,9 +181,9 @@ export default function About() {
               href="/Harshal_Madgulkar_Resume_7559207299.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden md:flex items-center px-10 py-6 rounded-xl bg-white/5 border border-white/10 uppercase tracking-widest text-sm hover:bg-white/10 transition"
+              className="hidden md:flex gap-4 items-center px-10 py-6 rounded-xl bg-white/5 border border-white/10 uppercase tracking-widest text-sm hover:bg-white/10 transition"
             >
-              Download Resume <FileSpreadsheet />
+              <Download /> Resume
             </a>
           </div>
         </div>

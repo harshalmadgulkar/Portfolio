@@ -1,44 +1,59 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
-const ROW_1 = [
+const FRONTEND = [
   { name: "HTML", icon: "devicon-html5-plain" },
   { name: "CSS", icon: "devicon-css3-plain" },
-  { name: "Tailwind CSS", icon: "devicon-tailwindcss-plain" },
   { name: "JavaScript", icon: "devicon-javascript-plain" },
+  { name: "TypeScript", icon: "devicon-typescript-plain colored" },
   { name: "React", icon: "devicon-react-original" },
   { name: "Next.js", icon: "devicon-nextjs-plain" },
-  { name: "Node.js", icon: "devicon-nodejs-plain" },
-  { name: "Express", icon: "devicon-express-original" },
-  { name: "PostgreSQL", icon: "devicon-postgresql-plain" },
-  { name: "MongoDB", icon: "devicon-mongodb-plain" },
-  { name: "Rest API", icon: "devicon-nodejs-plain" },
+  { name: "Tailwind CSS", icon: "devicon-tailwindcss-plain" },
+  { name: "Material UI", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/materialui/materialui-original.svg" },
+  {
+    name: "ShadCN UI",
+    src: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiBmaWxsPSIjMDAwMDAwIiBzdHlsZT0ib3BhY2l0eToxOyI+PHBhdGggIGQ9Ik0yMi4yMTkgMTEuNzg0TDExLjc4NCAyMi4yMTlhMS4wNDUgMS4wNDUgMCAwIDAgMS40NzYgMS40NzZMMjMuNjk1IDEzLjI2YTEuMDQ1IDEuMDQ1IDAgMCAwLTEuNDc2LTEuNDc2TTIwLjEzMi4zMDVMLjMwNSAyMC4xMzJhMS4wNDUgMS4wNDUgMCAwIDAgMS40NzYgMS40NzZMMjEuNjA4IDEuNzgxQTEuMDQ1IDEuMDQ1IDAgMCAwIDIwLjEzMi4zMDUiLz48L3N2Zz4="
+  },
 ];
 
-const ROW_2 = [
-  { name: "Docker", icon: "devicon-docker-plain" },
-  { name: "AWS", icon: "devicon-amazonwebservices-plain" },
+const STATE_BACKEND = [
+  { name: "Redux", icon: "devicon-redux-original colored" },
+  { name: "Zustand", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/zustand/zustand-original.svg" },
+  { name: "Node.js", icon: "devicon-nodejs-plain" },
+  { name: "Express", icon: "devicon-express-original" },
+  { name: "MongoDB", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" },
+  { name: "Redis", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg" },
+];
+
+const TOOLS = [
+  { name: "Git", icon: "devicon-git-plain colored" },
+  { name: "GitHub", icon: "devicon-github-original" },
+  { name: "GitLab", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gitlab/gitlab-original.svg" },
+  { name: "VS Code", icon: "devicon-vscode-plain colored" },
   { name: "Postman", icon: "devicon-postman-plain" },
-  { name: "Framer", icon: "devicon-framer-original" },
-  { name: "Figma", icon: "devicon-figma-plain" },
-  { name: "Spline", icon: "devicon-threejs-original" },
-  { name: "Photoshop", icon: "devicon-photoshop-plain" },
-  { name: "Illustrator", icon: "devicon-illustrator-plain" },
-  { name: "Canva", icon: "devicon-canva-plain" },
+  { name: "Vite", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg" },
+  { name: "npm", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/npm/npm-original.svg" },
+  { name: "Bun", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bun/bun-original.svg" },
+  { name: "Netlify", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/netlify/netlify-original.svg" },
+  { name: "Figma", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" },
+  { name: "Framer Motion", icon: "devicon-framermotion-original colored" },
+  { name: "Slack", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/slack/slack-original.svg" },
+  { name: "LaTeX", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/latex/latex-original.svg" },
 ];
 
 function Marquee({
   items,
   reverse = false,
 }: {
-  items: { name: string; icon: string; }[];
+  items: { name: string; icon?: string; src?: string; }[];
   reverse?: boolean;
 }) {
   return (
     <div className="relative overflow-hidden group">
-      <div className="pointer-events-none absolute left-0 top-0 h-full w-32 bg-gradient-to-r from-black to-transparent z-10" />
-      <div className="pointer-events-none absolute right-0 top-0 h-full w-32 bg-gradient-to-l from-black to-transparent z-10" />
+      <div className="pointer-events-none absolute left-0 top-0 h-full w-32 bg-linear-to-r from-black to-transparent z-10" />
+      <div className="pointer-events-none absolute right-0 top-0 h-full w-32 bg-linear-to-l from-black to-transparent z-10" />
 
       <div
         className={`
@@ -60,7 +75,7 @@ function Marquee({
 function SkillPill({
   item,
 }: {
-  item: { name: string; icon: string; };
+  item: { name: string; icon?: string; src?: string; };
 }) {
   return (
     <div
@@ -68,14 +83,18 @@ function SkillPill({
         flex items-center gap-4
         px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3
         rounded-lg sm:rounded-xl
-        bg-white/[0.04]
+        bg-white/4
         border border-white/10
         backdrop-blur-xl
         text-gray-200
         whitespace-nowrap
       "
     >
-      <i className={`${item.icon} colored text-xl sm:text-2xl`} />
+      {item.src ?
+        <Image src={item.src} alt={item.name} width={24} height={24} />
+        :
+        <i className={`${item.icon} colored text-xl sm:text-2xl`} />
+      }
       <span className="text-xs sm:text-sm font-medium">{item.name}</span>
     </div>
   );
@@ -135,8 +154,9 @@ export default function Skills() {
         className={`relative z-10 w-full mx-auto mt-24 sm:mt-32 md:mt-20 space-y-8 sm:space-y-10 md:space-y-12 transition-all duration-1000 ease-out delay-150 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"} `}
         style={{ transform: `translateY(${inView ? -scrollOffset : 16}px)` }}
       >
-        <Marquee items={ROW_1} />
-        <Marquee items={ROW_2} reverse />
+        <Marquee items={FRONTEND} />
+        <Marquee items={STATE_BACKEND} reverse />
+        <Marquee items={TOOLS} />
       </div>
     </section>
   );

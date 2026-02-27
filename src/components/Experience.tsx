@@ -8,7 +8,7 @@ const experiences = [
     company: "Foxberry Technologies Pvt. Ltd.",
     location: "Pune, Maharashtra, India",
     mode: "Work From Office",
-    role: "Frontend (React.js) Developer",
+    role: "Frontend (React.js) solution Developer",
     description:
       "Worked on large-scale public sector applications for Pimpri Chinchwad Municipal Corporation, building scalable React.js systems used in real-world government operations.",
     points: [
@@ -31,7 +31,7 @@ const experiences = [
     date: "Mar 2024 – Sep 2024",
     company: "Program-Warehouse Pvt. Ltd.",
     location: "Jaipur, India",
-    mode: "Onsite",
+    mode: "Remote",
     role: "Frontend Developer Intern",
     description:
       "Contributed to responsive web applications using React.js and modern UI practices, focusing on clean component architecture and efficient state management.",
@@ -81,7 +81,7 @@ export default function Experience() {
 
     const observer = new IntersectionObserver(
       ([entry]) => setInView(entry.isIntersecting),
-      { threshold: 0.25 }
+      { threshold: 0.05 }
     );
 
     observer.observe(sectionRef.current);
@@ -96,14 +96,13 @@ export default function Experience() {
     >
       {/* HEADING */}
       <div
-        className={`
-          absolute inset-x-0 top-0 flex justify-center pointer-events-none
+        className={`absolute inset-x-0 top-0 flex justify-center pointer-events-none
           transition-all duration-1000 ease-out
           ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"}
         `}
       >
         <h2
-          className="py-20 text-[3.5rem] sm:text-[4.5rem] md:text-[5.5rem] font-extrabold tracking-widest bg-linear-to-b from-white/30 to-white/5 bg-clip-text text-transparent"
+          className="py-20 text-[3rem] sm:text-[4.5rem] md:text-[5.5rem] font-extrabold tracking-widest bg-linear-to-b from-white/30 to-white/5 bg-clip-text text-transparent"
         >
           EXPERIENCE
         </h2>
