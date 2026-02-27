@@ -27,6 +27,24 @@ export default function RootLayout({
           <Navbar />
           {children}
         </LenisProvider>
+
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Harshal Madgulkar",
+              url: "https://harshalmadgulkar.live",
+              jobTitle: "Frontend Engineer",
+              sameAs: [
+                "https://github.com/harshalmadgulkar",
+                "https://www.linkedin.com/in/harshal-madgulkar/"
+              ],
+            }),
+          }}
+        />
       </body>
     </html>
   );
