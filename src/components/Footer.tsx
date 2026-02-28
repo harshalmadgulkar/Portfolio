@@ -1,6 +1,6 @@
 "use client";
 
-import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { Github, Linkedin, Mail, Phone } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -30,11 +30,16 @@ export default function Footer() {
                 href: "mailto:harshal.madgulkar725@gmail.com",
                 external: false,
               },
+              // {
+              //   Icon: Twitter,
+              //   href: "https://x.com/Harshcreed",
+              //   external: true,
+              // },
               {
-                Icon: Twitter,
-                href: "https://x.com/Harshcreed",
+                Icon: Phone,
+                href: "tel:+917559207299",
                 external: true,
-              },
+              }
             ].map(({ Icon, href, external }, i) => (
               <a
                 key={i}

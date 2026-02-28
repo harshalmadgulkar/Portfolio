@@ -67,7 +67,7 @@ export default function Hero() {
       </div>
 
       {/* MOBILE — SPLIT TEXT */}
-      <div
+      {/* <div
         className={`md:hidden absolute top-14 flex items-center justify-center transition-opacity duration-1000 ${mounted ? "opacity-100" : "opacity-0"
           }`}
         style={{ zIndex: 1 }}
@@ -103,18 +103,13 @@ export default function Hero() {
             </linearGradient>
           </defs>
         </svg>
-      </div>
+      </div> */}
 
       {/* =========================
           PORTRAIT
       ========================= */}
       <div
-        className={`
-          absolute left-1/2 top-90
-          -translate-x-1/2 -translate-y-1/2
-          transition-all duration-1000
-          ${mounted ? "opacity-100 scale-100" : "opacity-0 scale-95"}
-        `}
+        className={`absolute left-1/2 top-70 md:top-90 -translate-x-1/2 -translate-y-1/2 transition-all duration-1000 ${mounted ? "opacity-100 scale-100" : "opacity-0 scale-95"}`}
         style={{ zIndex: 3 }}
       >
         <div
@@ -175,16 +170,16 @@ export default function Hero() {
         `}
         style={{ zIndex: 4 }}
       >
-        <h2 className="text-4xl font-bold bg-linear-to-r from-orange-500 via-amber-500 to-yellow-400 bg-clip-text text-transparent">
+        {/* <h2 className="text-4xl font-bold bg-linear-to-r from-orange-500 via-amber-500 to-yellow-400 bg-clip-text text-transparent">
           Building Real-World  <br /> Web Products
-        </h2>
+        </h2> */}
 
-        <p className="text-[0.9rem] mt-2 text-gray-400">
+        {/* <p className="text-[0.9rem] mt-2 text-gray-400">
           I build scalable React.js applications with reusable component architecture, role-based access systems, and performance-optimized UI used in real-world municipal platforms.
-        </p>
+        </p> */}
 
         <h2 className="text-4xl font-bold bg-linear-to-r from-orange-500 via-amber-500 to-yellow-400 bg-clip-text text-transparent">
-          Frontend Engineer • React Developer
+          Frontend Engineer React Developer
         </h2>
 
         <p className="text-[0.9rem] mt-2 text-gray-400">

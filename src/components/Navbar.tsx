@@ -148,10 +148,12 @@ export default function Navbar() {
         {/* TOP BAR */}
         <div className="relative z-10 flex items-center justify-between px-4 h-14">
           {/* LOGO */}
-          <div className="w-9 h-9 rounded-full bg-black/30 backdrop-blur-md flex items-center justify-center">
+          {/* <div className="w-9 h-9 rounded-full bg-black/30 backdrop-blur-md flex items-center justify-center">
             <Image src="/logo.png" alt="logo" width={25} height={25} />
+          </div> */}
+          <div className="md:hidden select-none">
+            Harshal Madgulkar
           </div>
-
           {/* DESKTOP LINKS */}
           <ul className="hidden md:flex gap-10 px-10">
             {navItems.map((item) => (

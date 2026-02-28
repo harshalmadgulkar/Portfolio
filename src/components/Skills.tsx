@@ -56,10 +56,7 @@ function Marquee({
       <div className="pointer-events-none absolute right-0 top-0 h-full w-32 bg-linear-to-l from-black to-transparent z-10" />
 
       <div
-        className={`
-          marquee-track
-          ${reverse ? "animate-marquee-reverse" : "animate-marquee"}
-        `}
+        className={`marquee-track ${reverse ? "animate-marquee-reverse" : "animate-marquee"}`}
       >
         {items.map((item, i) => (
           <SkillPill key={`a-${i}`} item={item} />
@@ -79,16 +76,7 @@ function SkillPill({
 }) {
   return (
     <div
-      className="
-        flex items-center gap-4
-        px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3
-        rounded-lg sm:rounded-xl
-        bg-white/4
-        border border-white/10
-        backdrop-blur-xl
-        text-gray-200
-        whitespace-nowrap
-      "
+      className="flex items-center gap-4 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 rounded-lg sm:rounded-xl bg-white/4 border border-white/40 backdrop-blur-xl text-gray-200 whitespace-nowrap"
     >
       {item.src ?
         <Image src={item.src} alt={item.name} width={24} height={24} />

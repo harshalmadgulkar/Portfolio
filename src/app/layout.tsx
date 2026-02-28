@@ -4,6 +4,8 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import Navbar from "@/components/Navbar";
 import LenisProvider from "@/components/LenisProvider";
 import { Rubik } from "next/font/google";
+import AudioProvider from "@/components/AudioProvider";
+import SoundButton from "@/components/SoundButton";
 
 const spaceGrotesk = Rubik({
   subsets: ["latin"],
@@ -25,10 +27,13 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-black text-white">
-        <LenisProvider>
-          <Navbar />
-          {children}
-        </LenisProvider>
+        <AudioProvider>
+          <LenisProvider>
+            <Navbar />
+            {children}
+            <SoundButton />
+          </LenisProvider>
+        </AudioProvider>
 
 
         <Analytics />
