@@ -4,8 +4,8 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import Navbar from "@/components/Navbar";
 import LenisProvider from "@/components/LenisProvider";
 import { Rubik } from "next/font/google";
-import AudioProvider from "@/components/AudioProvider";
 import SoundButton from "@/components/SoundButton";
+import AudioProvider from "@/components/AudioProvider";
 
 const spaceGrotesk = Rubik({
   subsets: ["latin"],
