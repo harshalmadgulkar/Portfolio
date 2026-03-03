@@ -49,7 +49,7 @@ export default function About() {
       {/* ================= SECTION HEADING ================= */}
 
       <div className="relative flex items-center justify-center mb-10">
-        <h2 className="text-[4.5rem] sm:text-[5rem] md:text-[7rem] font-extrabold tracking-widest bg-linear-to-b from-white/15 to-white/5 bg-clip-text text-transparent select-none">
+        <h2 className="text-[4.5rem] sm:text-[5rem] md:text-[7rem] font-extrabold tracking-widest bg-linear-to-b from-white/15 to-white/10 bg-clip-text text-transparent select-none">
           ABOUT
         </h2>
       </div>

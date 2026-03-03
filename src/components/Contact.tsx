@@ -63,7 +63,7 @@ export default function Contact() {
       {/* BACKGROUND HEADING */}
       <div className="absolute inset-x-0 top-10 sm:top-20 flex justify-center pointer-events-none">
         <h2
-          className="text-[4.5rem] sm:text-[5rem] md:text-[7rem] font-extrabold tracking-widest bg-linear-to-b from-white/15 to-white/5 bg-clip-text text-transparent select-none"
+          className="text-[4.5rem] sm:text-[5rem] md:text-[7rem] font-extrabold tracking-widest bg-linear-to-b from-white/15 to-white/10 bg-clip-text text-transparent select-none"
         >
           CONTACT
         </h2>

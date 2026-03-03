@@ -102,7 +102,7 @@ export default function Experience() {
         `}
       >
         <h2
-          className="py-20 text-[3rem] sm:text-[4.5rem] md:text-[5.5rem] font-extrabold tracking-widest bg-linear-to-b from-white/30 to-white/5 bg-clip-text text-transparent"
+          className="py-20 text-[3rem] sm:text-[4.5rem] md:text-[5.5rem] font-extrabold tracking-widest bg-linear-to-b from-white/30 to-white/10 bg-clip-text text-transparent"
         >
           EXPERIENCE
         </h2>

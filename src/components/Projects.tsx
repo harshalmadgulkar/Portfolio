@@ -129,7 +129,7 @@ export default function Projects() {
         `}
       >
         <h2
-          className="text-[4rem] sm:text-[5rem] md:text-[5.5rem] font-extrabold tracking-widest bg-linear-to-b from-white/15 to-white/5 bg-clip-text text-transparent select-none"
+          className="text-[4rem] sm:text-[5rem] md:text-[5.5rem] font-extrabold tracking-widest bg-linear-to-b from-white/15 to-white/10 bg-clip-text text-transparent select-none"
         >
           PROJECTS
         </h2>
