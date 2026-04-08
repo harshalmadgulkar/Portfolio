@@ -131,8 +131,7 @@ export default function About() {
                 <Download />
                 <a
                   href="/Harshal_Madgulkar_Resume_7559207299.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  download="Harshal_Madgulkar_Resume_7559207299.pdf"
                 >
                   Resume
                 </a>
@@ -162,6 +161,7 @@ export default function About() {
               href="/Harshal_Madgulkar_Resume_7559207299.pdf"
               target="_blank"
               rel="noopener noreferrer"
+              // download="Harshal_Madgulkar_Resume_7559207299.pdf"
               className="hidden md:flex gap-4 items-center px-10 py-6 rounded-xl bg-white/5 border border-white/10 uppercase tracking-widest text-sm hover:bg-white/10 transition"
             >
               <Download /> Download Resume
