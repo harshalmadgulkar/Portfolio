@@ -21,13 +21,8 @@ export default function About() {
 
     const onScroll = () => {
       if (!sectionRef.current) return;
-
       const rect = sectionRef.current.getBoundingClientRect();
-      const progress = Math.min(
-        Math.max(1 - rect.top / window.innerHeight, 0),
-        1
-      );
-
+      const progress = Math.min(Math.max(1 - rect.top / window.innerHeight, 0), 1);
       setScrollOffset(progress * 12);
     };
 
@@ -46,30 +41,20 @@ export default function About() {
       id="about"
       className="relative mt-20 md:mb-10 min-h-[85vh] md:min-h-screen bg-black text-white overflow-hidden"
     >
-      {/* ================= SECTION HEADING ================= */}
-
+      {/* SECTION HEADING */}
       <div className="relative flex items-center justify-center mb-10">
         <h2 className="text-[4.5rem] sm:text-[5rem] md:text-[7rem] font-extrabold tracking-widest bg-linear-to-b from-white/15 to-white/10 bg-clip-text text-transparent select-none">
           ABOUT
         </h2>
       </div>
 
-      {/* ================= DESKTOP + TABLET VIDEO ================= */}
+      {/* DESKTOP VIDEO */}
       <div
-        className={`
-          hidden md:block
-          absolute left-0
-          transition-all duration-1000 ease-out
-          ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"}
-        `}
-        style={{
-          top: "260px",
-          transform: `translateY(${inView ? -scrollOffset : 16}px)`
-        }}
+        className={`hidden md:block absolute left-0 transition-all duration-1000 ease-out ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"
+          }`}
+        style={{ top: "260px", transform: `translateY(${inView ? -scrollOffset : 16}px)` }}
       >
-        <div
-          className="w-105 lg:w-130 aspect-auto rounded-tr-3xl rounded-br-3xl shadow-[0_30px_80px_rgba(0,0,0,0.7)] overflow-visible"
-        >
+        <div className="w-105 lg:w-130 aspect-auto rounded-tr-3xl rounded-br-3xl shadow-[0_30px_80px_rgba(0,0,0,0.7)] overflow-visible">
           <video
             src="/about-video.mp4"
             autoPlay
@@ -81,16 +66,12 @@ export default function About() {
         </div>
       </div>
 
-      {/* ================= CONTENT ================= */}
+      {/* MAIN CONTENT */}
       <div className="relative z-20 max-w-6xl mx-auto px-6 md:px-10 md:pl-90 lg:pl-115">
         <div
-          className={`
-            transition-all duration-1000 ease-out delay-150
-            ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"}
-          `}
-          style={{
-            transform: `translateY(${inView ? -scrollOffset : 16}px)`
-          }}
+          className={`transition-all duration-1000 ease-out delay-150 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"
+            }`}
+          style={{ transform: `translateY(${inView ? -scrollOffset : 16}px)` }}
         >
           <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold">
             Hi, I’m{" "}
@@ -100,7 +81,10 @@ export default function About() {
           </h3>
 
           <p className="mt-6 text-gray-400 leading-relaxed w-full">
-            I’m a Frontend (React.js) Engineer with 1.5+ years of experience building scalable, production-grade React.js applications. I specialize in role-based systems, reusable UI architecture, and performance-optimized web platforms used in real-world municipal and enterprise environments.
+            MERN Stack Developer with 1.5+ years of experience building scalable, high-performance full-stack web
+            applications using React.js, TypeScript, Node.js, Express.js, and MongoDB. Delivered large-scale municipal
+            projects for Pimpri Chinchwad Municipal Corporation, including the School Management Information System,
+            Clinic Licensing & Registration System, Environmental Status Report, and Garden E-Ticketing Platform.
           </p>
 
           {/* WHAT I DO */}
@@ -111,12 +95,13 @@ export default function About() {
 
             <div className="flex flex-wrap gap-3">
               {[
+                "MERN Stack Development",
                 "React.js Architecture",
                 "TypeScript Development",
                 "Redux Toolkit State Management",
                 "Role-Based Access Systems",
                 "Reusable UI Component Libraries",
-                "Performance Optimization"
+                "Performance Optimization",
               ].map((item) => (
                 <span
                   key={item}
@@ -128,13 +113,9 @@ export default function About() {
             </div>
           </div>
 
-          {/* ================= CONNECT + MOBILE VIDEO ================= */}
-          <div className="
-            mt-12
-            flex flex-col gap-8
-            md:flex-row md:items-center md:justify-between
-          ">
-            {/* Mobile video inline */}
+          {/* CONNECT + RESUME */}
+          <div className="mt-12 flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
+            {/* Mobile Video + Resume */}
             <div className="md:hidden flex gap-5 items-center -ml-6">
               <div className="w-30 aspect-auto rounded-xl overflow-hidden">
                 <video
@@ -158,17 +139,16 @@ export default function About() {
               </div>
             </div>
 
-            {/* Desktop / Tablet connect */}
+            {/* Desktop Connect */}
             <div className="hidden md:block">
               <p className="text-sm uppercase tracking-widest text-gray-500 mb-4">
                 Connect with me
               </p>
-
               <div className="flex gap-4">
-                <a href="https://github.com/harshalmadgulkar" target="_blank">
+                <a href="https://github.com/harshalmadgulkar" target="_blank" rel="noopener noreferrer">
                   <IconWrap><FaGithub size={18} /></IconWrap>
                 </a>
-                <a href="https://www.linkedin.com/in/harshal-madgulkar" target="_blank">
+                <a href="https://www.linkedin.com/in/harshal-madgulkar" target="_blank" rel="noopener noreferrer">
                   <IconWrap><FaLinkedin size={18} /></IconWrap>
                 </a>
                 <a href="mailto:harshal.madgulkar725@gmail.com">
@@ -177,13 +157,14 @@ export default function About() {
               </div>
             </div>
 
+            {/* Desktop Resume Button */}
             <a
               href="/Harshal_Madgulkar_Resume_7559207299.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="hidden md:flex gap-4 items-center px-10 py-6 rounded-xl bg-white/5 border border-white/10 uppercase tracking-widest text-sm hover:bg-white/10 transition"
             >
-              <Download /> Resume
+              <Download /> Download Resume
             </a>
           </div>
         </div>

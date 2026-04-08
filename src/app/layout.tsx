@@ -35,11 +35,10 @@ export default function RootLayout({
           </LenisProvider>
         </AudioProvider>
 
-
         <Analytics />
         <SpeedInsights />
 
-
+        {/* Structured Data (Schema.org) */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -48,7 +47,7 @@ export default function RootLayout({
               "@type": "Person",
               name: "Harshal Madgulkar",
               url: "https://harshalmadgulkar.live",
-              jobTitle: "React Developer",
+              jobTitle: "MERN Stack Developer",
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Pune",
@@ -56,7 +55,7 @@ export default function RootLayout({
               },
               sameAs: [
                 "https://github.com/harshalmadgulkar",
-                "https://www.linkedin.com/in/harshal-madgulkar/"
+                "https://www.linkedin.com/in/harshal-madgulkar/",
               ],
             }),
           }}
@@ -66,19 +65,19 @@ export default function RootLayout({
   );
 }
 
-// SEO Data
+// SEO Metadata
 export const metadata = {
   title: {
-    default: "Harshal Madgulkar - React Developer & Frontend Engineer",
+    default: "Harshal Madgulkar | MERN Stack Developer",
     template: "%s | Harshal Madgulkar",
   },
-  description: "Harshal Madgulkar is a Pune-based React Developer specializing in scalable frontend architecture and performance optimization.",
+  description: "Harshal Madgulkar is a Pune-based MERN Stack Developer with 1.5+ years of experience building scalable, high-performance full-stack web applications using React.js, TypeScript, Node.js, Express.js & MongoDB. Delivered large-scale municipal projects for Pimpri Chinchwad Municipal Corporation.",
+
   openGraph: {
-    title: "Harshal Madgulkar - React Developer & Frontend Engineer",
-    description:
-      "Harshal Madgulkar is a Pune-based React Developer specializing in scalable frontend architecture and performance optimization.",
+    title: "Harshal Madgulkar | MERN Stack Developer",
+    description: "Harshal Madgulkar is a Pune-based MERN Stack Developer with 1.5+ years of experience building scalable, high-performance full-stack web applications using React.js, TypeScript, Node.js, Express.js & MongoDB. Delivered large-scale municipal projects for Pimpri Chinchwad Municipal Corporation.",
     url: "https://harshalmadgulkar.live",
-    siteName: "Harshal Portfolio",
+    siteName: "Harshal Madgulkar Portfolio",
     type: "website",
     images: [
       {
@@ -88,11 +87,11 @@ export const metadata = {
       },
     ],
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "Harshal Madgulkar | Frontend Engineer",
-    description:
-      "Frontend Engineer specializing in React.js and scalable UI architecture.",
+    title: "Harshal Madgulkar | MERN Stack Developer",
+    description: "MERN Stack Developer with 1.5+ years experience building scalable full-stack applications using React, Node.js, Express & MongoDB.",
     images: ["/og-image.png"],
   },
 };

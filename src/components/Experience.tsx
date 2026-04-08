@@ -4,25 +4,30 @@ import { useEffect, useRef, useState } from "react";
 
 const experiences = [
   {
-    date: "Feb 2025 – Present",
+    date: "Feb 2025 – Feb 2026",
     company: "Foxberry Technologies Pvt. Ltd.",
     location: "Pune, Maharashtra, India",
     mode: "Work From Office",
-    role: "Frontend (React.js) solution Developer",
+    role: "Solution (MERN Stack) Developer",
     description:
-      "Worked on large-scale public sector applications for Pimpri Chinchwad Municipal Corporation, building scalable React.js systems used in real-world government operations.",
+      "Building scalable full-stack MERN applications for Pimpri Chinchwad Municipal Corporation. Delivered large-scale public sector platforms used by thousands of citizens daily.",
     points: [
-      "Engineered a centralized feature visibility and access control platform to manage role-based UI rendering across multiple applications.",
-      "Developed production-grade municipal systems including School Management Information System and Garden E-Ticketing Platform.",
-      "Implemented complex state management using Redux Toolkit & Persist to ensure performance and consistency across large datasets.",
-      "Reduced developer rework by 40% and accelerated deployment cycles by 30% by introducing reusable UI components and standardized workflows."
+      "Spearheaded full-stack development (React.js, Node.js, Express.js, MongoDB) for multiple high-impact municipal applications.",
+      "Engineered a custom internal MERN platform and shared UI library to centrally manage feature visibility and role-based access across all projects.",
+      "Developed key public applications including School Management Information System, Garden E-Ticketing Platform, and Clinic Licensing & Registration System.",
+      "Reduced developer rework by 40% and accelerated deployment time by 30% through reusable components and standardized full-stack workflows."
     ],
     tech: [
+      "MERN Stack",
       "React.js",
       "TypeScript",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
       "Redux Toolkit",
       "Redux Persist",
       "Tailwind CSS",
+      "Mongoose",
       "Vite",
       "Git"
     ],
@@ -32,18 +37,19 @@ const experiences = [
     company: "Program-Warehouse Pvt. Ltd.",
     location: "Jaipur, India",
     mode: "Remote",
-    role: "Frontend Developer Intern",
+    role: "Frontend (React) Developer Intern",
     description:
-      "Contributed to responsive web applications using React.js and modern UI practices, focusing on clean component architecture and efficient state management.",
+      "Contributed to live React.js applications with a focus on clean architecture, state management, and responsive design.",
     points: [
-      "Built responsive, production-ready React.js applications from design mockups.",
-      "Implemented state management using Redux and Context API to optimize performance.",
-      "Collaborated with backend teams for API integration and data flow consistency.",
-      "Improved UI responsiveness and cross-device compatibility."
+      "Built responsive, production-ready React.js applications from design mockups using Tailwind CSS.",
+      "Implemented efficient state management with Redux and Context API.",
+      "Collaborated with backend teams to integrate RESTful APIs and ensure seamless data flow.",
+      "Improved UI performance and cross-device user experience."
     ],
     tech: [
       "React.js",
       "JavaScript",
+      "TypeScript",
       "Tailwind CSS",
       "Redux",
       "Context API",

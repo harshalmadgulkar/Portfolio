@@ -166,10 +166,13 @@ export default function Projects() {
             title="Garden E-Ticketing Platform"
             year="2026"
             type="Public Sector Application"
-            description="QR-based digital ticketing system with secure payment gateway integration, built for municipal gardens to eliminate manual cash handling and streamline visitor entry."
-            tech={[
+            description="MERN full-stack platform for Pimpri Chinchwad Municipal Corporation. Built real-time QR ticketing system with secure Node.js + Express RESTful APIs, scalable MongoDB schemas, EaseBuzz payment integration, and Redux-managed frontend to eliminate manual cash handling across multiple municipal gardens." tech={[
+              "MERN Stack",
               "React.js",
               "TypeScript",
+              "Node.js",
+              "Express.js",
+              "MongoDB",
               "Redux Toolkit",
               "Tailwind CSS",
               "Payment Gateway Integration"

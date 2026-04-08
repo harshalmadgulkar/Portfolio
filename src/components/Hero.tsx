@@ -43,7 +43,7 @@ export default function Hero() {
     >
 
       <h1 className="sr-only">
-        Harshal Madgulkar - React Developer & Frontend Engineer
+        Harshal Madgulkar - MERN Stack Developer
       </h1>
       {/* =========================
           BACKGROUND TEXT
@@ -125,7 +125,7 @@ export default function Hero() {
         >
           <Image
             src="/normal.png"
-            alt="Harshal Madgulkar - React Developer Portrait"
+            alt="Harshal Madgulkar - MERN Stack Developer Portrait"
             fill
             priority
             className="object-cover rounded-xl"
@@ -179,11 +179,11 @@ export default function Hero() {
         </p> */}
 
         <h2 className="text-4xl font-bold bg-linear-to-r from-orange-500 via-amber-500 to-yellow-400 bg-clip-text text-transparent">
-          Frontend Engineer React Developer
+          MERN Stack Developer
         </h2>
 
         <p className="text-[0.9rem] mt-2 text-gray-400">
-          React • TypeScript • Scalable Architecture
+          React • Node • TypeScript • Scalable Architecture
         </p>
       </div>
 
@@ -195,17 +195,17 @@ export default function Hero() {
           Building Real-World Web Products
         </h2>
         <p className="text-sm mt-1 text-gray-500">
-          I build scalable React.js applications with reusable component architecture, role-based access systems, and performance-optimized UI used in real-world municipal platforms.
+          I build scalable MERN Stack applications with reusable component architecture, role-based access systems, and performance-optimized UI used in real-world municipal platforms.
         </p>
       </div>
 
       <div className="hidden md:block absolute bottom-20 right-20 text-right z-10">
         <p className="text-sm text-gray-500">
           <span className="text-lg bg-linear-to-r from-orange-500 via-amber-500 to-yellow-400 bg-clip-text text-transparent">
-            Frontend Engineer • React Developer
+            MERN Stack Developer
           </span>
           <br />
-          React • TypeScript • Scalable Architecture
+          React • Node • TypeScript • Scalable Architecture
         </p>
       </div>
     </section>

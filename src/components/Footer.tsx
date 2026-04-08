@@ -60,9 +60,14 @@ export default function Footer() {
             <div className="flex-1 h-px bg-linear-to-r from-transparent via-white/20 to-transparent" />
           </div>
 
+          {/* MERN BRANDING TAGLINE */}
+          <p className="text-sm font-medium text-orange-400 tracking-widest uppercase">
+            MERN Stack Developer
+          </p>
+
           {/* COPYRIGHT */}
           <p className="text-sm text-gray-500">
-            © 2026 Harshal M. All Rights Reserved.
+            © 2026 Harshal Madgulkar. All Rights Reserved.
           </p>
         </div>
       </div>

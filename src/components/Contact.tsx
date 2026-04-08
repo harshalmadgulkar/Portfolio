@@ -31,7 +31,7 @@ export default function Contact() {
   }, []);
 
   async function handleSubmit(e: React.FormEvent) {
-    console.log("FORM SUBMITTED"); // 👈 ADD THIS
+    console.log("FORM SUBMITTED");
     e.preventDefault();
     setLoading(true);
     setStatus(null);
@@ -73,15 +73,15 @@ export default function Contact() {
         {/* LEFT CONTENT */}
         <div className={`flex flex-col justify-center transition-all duration-1000 ease-out ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"} `}>
           <h3 className="text-3xl sm:text-4xl font-bold mb-2 bg-linear-to-r from-orange-500 via-amber-500 to-yellow-400 bg-clip-text text-transparent">
-            Let’s work together
+            Let’s build together
           </h3>
 
           <p className="text-gray-400 mb-2 max-w-md">
-            I’m available for full-time roles & freelance projects.
+            I’m open to full-time MERN Stack roles and freelance full-stack projects.
           </p>
 
           <p className="text-gray-400 mb-8 max-w-md">
-            My inbox is always open — whether you have a question or just want to say hi.
+            Whether you need a scalable React + Node.js platform or just want to discuss opportunities — my inbox is always open.
           </p>
 
           <a
