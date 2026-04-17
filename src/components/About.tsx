@@ -81,7 +81,7 @@ export default function About() {
           </h3>
 
           <p className="mt-6 text-gray-400 leading-relaxed w-full">
-            MERN Stack Developer with 1.5+ years of experience building scalable, high-performance full-stack web
+            MERN Stack Developer with 2+ years of experience building scalable, high-performance full-stack web
             applications using React.js, TypeScript, Node.js, Express.js, and MongoDB. Delivered large-scale municipal
             projects for Pimpri Chinchwad Municipal Corporation, including the School Management Information System,
             Clinic Licensing & Registration System, Environmental Status Report, and Garden E-Ticketing Platform.

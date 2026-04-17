@@ -71,11 +71,11 @@ export const metadata = {
     default: "Harshal Madgulkar | MERN Stack Developer",
     template: "%s | Harshal Madgulkar",
   },
-  description: "Harshal Madgulkar is a Pune-based MERN Stack Developer with 1.5+ years of experience building scalable, high-performance full-stack web applications using React.js, TypeScript, Node.js, Express.js & MongoDB. Delivered large-scale municipal projects for Pimpri Chinchwad Municipal Corporation.",
+  description: "Harshal Madgulkar is a Pune-based MERN Stack Developer with 2+ years of experience building scalable, high-performance full-stack web applications using React.js, TypeScript, Node.js, Express.js & MongoDB. Delivered large-scale municipal projects for Pimpri Chinchwad Municipal Corporation.",
 
   openGraph: {
     title: "Harshal Madgulkar | MERN Stack Developer",
-    description: "Harshal Madgulkar is a Pune-based MERN Stack Developer with 1.5+ years of experience building scalable, high-performance full-stack web applications using React.js, TypeScript, Node.js, Express.js & MongoDB. Delivered large-scale municipal projects for Pimpri Chinchwad Municipal Corporation.",
+    description: "Harshal Madgulkar is a Pune-based MERN Stack Developer with 2+ years of experience building scalable, high-performance full-stack web applications using React.js, TypeScript, Node.js, Express.js & MongoDB. Delivered large-scale municipal projects for Pimpri Chinchwad Municipal Corporation.",
     url: "https://harshalmadgulkar.live",
     siteName: "Harshal Madgulkar Portfolio",
     type: "website",
@@ -91,7 +91,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Harshal Madgulkar | MERN Stack Developer",
-    description: "Harshal Madgulkar is a Pune-based MERN Stack Developer with 1.5+ years of experience building scalable, high-performance full-stack web applications using React.js, TypeScript, Node.js, Express.js & MongoDB. Delivered large-scale municipal projects for Pimpri Chinchwad Municipal Corporation.",
+    description: "Harshal Madgulkar is a Pune-based MERN Stack Developer with 2+ years of experience building scalable, high-performance full-stack web applications using React.js, TypeScript, Node.js, Express.js & MongoDB. Delivered large-scale municipal projects for Pimpri Chinchwad Municipal Corporation.",
     images: ["/og-image.png"],
   },
 };

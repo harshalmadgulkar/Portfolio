@@ -33,11 +33,11 @@ const experiences = [
     ],
   },
   {
-    date: "Mar 2024 – Sep 2024",
+    date: "Jan 2024 – Feb 2025",
     company: "Program-Warehouse Pvt. Ltd.",
     location: "Jaipur, India",
     mode: "Remote",
-    role: "Frontend (React) Developer Intern",
+    role: "Frontend (React) Developer",
     description:
       "Contributed to live React.js applications with a focus on clean architecture, state management, and responsive design.",
     points: [

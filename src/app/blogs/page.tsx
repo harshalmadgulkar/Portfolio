@@ -1,13 +1,13 @@
 // app/blog/page.tsx
 import Link from "next/link";
 
-export default function BlogPage() {
+export default function BlogsPage() {
     return (
         <section className="min-h-screen bg-black text-white pt-28 pb-20">
             <div className="max-w-7xl mx-auto px-6">
                 <div className="mb-16">
                     <h1 className="text-5xl md:text-6xl font-bold tracking-tight bg-linear-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent">
-                        Blog
+                        Blogs
                     </h1>
                     <p className="text-gray-400 mt-4 text-lg">
                         Thoughts on MERN Stack, React architecture, full-stack development, and lessons from real-world projects.
