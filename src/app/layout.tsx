@@ -47,7 +47,7 @@ export default function RootLayout({
               "@type": "Person",
               name: "Harshal Madgulkar",
               url: "https://harshalmadgulkar.live",
-              jobTitle: "MERN Stack Developer",
+              jobTitle: "Full Stack Developer (React.js, TypeScript, Node.js)",
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Pune",
@@ -56,6 +56,29 @@ export default function RootLayout({
               sameAs: [
                 "https://github.com/harshalmadgulkar",
                 "https://www.linkedin.com/in/harshal-madgulkar/",
+              ],
+              mainEntityOfPage: {
+                "@type": "WebPage",
+                "@id": "https://harshalmadgulkar.live",
+              },
+
+              hasPart: [
+                {
+                  "@type": "Article",
+                  headline: "Stop Redefining Your Interfaces: 6 TypeScript Utility Types You Actually Need",
+                  url: "https://www.linkedin.com/pulse/stop-redefining-your-interfaces-6-typescript-utility-types-madgulkar-jj2af/",
+                  author: {
+                    "@type": "Person",
+                    name: "Harshal Madgulkar",
+                  },
+                  publisher: {
+                    "@type": "Organization",
+                    name: "LinkedIn",
+                  },
+                  datePublished: "2026-02-13",
+                  description:
+                    "A practical guide to essential TypeScript utility types that improve code reusability and reduce redundancy in large-scale applications.",
+                },
               ],
             }),
           }}
