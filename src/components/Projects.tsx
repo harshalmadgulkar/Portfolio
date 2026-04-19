@@ -118,7 +118,7 @@ export default function Projects() {
     <section
       id="projects"
       ref={sectionRef}
-      className="relative md:pt-10 md:pb-10 bg-black overflow-hidden scroll-mt-30"
+      className="relative mt-16 md:pt-10 md:pb-10 bg-black overflow-hidden scroll-mt-30"
     >
       {/* HEADING */}
       <div

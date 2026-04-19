@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
@@ -112,6 +111,7 @@ export default function Navbar() {
     { label: "Skills", id: "skills" },
     { label: "Projects", id: "projects" },
     { label: "Experience", id: "experience" },
+    { label: "Blogs", id: "blogs" },
     { label: "Contact", id: "contact" },
   ];
 
@@ -183,7 +183,7 @@ export default function Navbar() {
 
       {/* MOBILE DROPDOWN (SLIDES DOWN) */}
       <div
-        className={`md:hidden mt-2 w-75 overflow-hidden transition-all duration-400 ease-out ${open ? "max-h-80 opacity-100 translate-y-0" : "max-h-0 opacity-0 -translate-y-2"} `}
+        className={`md:hidden mt-2 w-75 overflow-hidden transition-all duration-400 ease-out ${open ? "max-h-96 opacity-100 translate-y-0" : "max-h-0 opacity-0 -translate-y-2"} `}
         style={{
           borderRadius: "24px",
           backgroundColor: `rgba(255,255,255,${glassOpacity})`,
